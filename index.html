@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscripción al Curso</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo {
+            max-width: 100px;
+            height: auto;
+            margin: 0 10px;
+            vertical-align: middle;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: bold;
+        }
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .form-group input:focus,
+        .form-group select:focus {
+            border-color: #007bff;
+            outline: none;
+        }
+        .btn {
+            background-color: #007bff;
+            color: #fff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+        }
+        .btn:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="logo-container">
+            <img src="URL_DEL_LOGO_EMERGENCIAS_1" alt="Logo Emergencias 1" class="logo">
+            <img src="URL_DEL_LOGO_EMERGENCIAS_2" alt="Logo Emergencias 2" class="logo">
+            <img src="URL_DEL_LOGO_PREHOSPITALARIA" alt="Logo Prehospitalaria" class="logo">
+        </div>
+        <h2>Planilla de Inscripción</h2>
+        <form action="https://formspree.io/f/xeozbevo" method="POST" id="inscripcionForm">
+            <div class="form-group">
+                <label for="nombreApellido">Nombre y Apellido</label>
+                <input type="text" id="nombreApellido" name="nombreApellido" required>
+            </div>
+            <div class="form-group">
+                <label for="dni">DNI</label>
+                <input type="text" id="dni" name="dni" required>
+            </div>
+            <div class="form-group">
+                <label for="localidad">Localidad</label>
+                <input type="text" id="localidad" name="localidad" required>
+            </div>
+            <div class="form-group">
+                <label for="provincia">Provincia</label>
+                <input type="text" id="provincia" name="provincia" required>
+            </div>
+            <div class="form-group">
+                <label for="mail">Mail</label>
+                <input type="email" id="mail" name="mail" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="curso">Curso Elegido</label>
+                <input type="text" id="curso" name="curso" required>
+            </div>
+            <div class="form-group">
+                <label for="sede">Sede</label>
+                <select id="sede" name="sede" required>
+                    <option value="">Seleccione una sede</option>
+                    <option value="Dolores">Dolores</option>
+                    <option value="La Costa">La Costa</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Inscribirse</button>
+        </form>
+    </div>
+
+    </body>
+</html>
