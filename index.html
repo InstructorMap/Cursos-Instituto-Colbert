@@ -6,8 +6,8 @@
     <title>Inscripción al Curso</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f4f4f9;
             margin: 0;
             padding: 20px;
             display: flex;
@@ -16,27 +16,17 @@
             min-height: 100vh;
         }
         .container {
-            background-color: #fff;
+            background-color: #ffffff;
             padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             max-width: 500px;
             width: 100%;
-        }
-        .logo-container {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .logo {
-            max-width: 100px;
-            height: auto;
-            margin: 0 10px;
-            vertical-align: middle;
         }
         h2 {
             text-align: center;
             color: #333;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
         }
         .form-group {
             margin-bottom: 20px;
@@ -45,15 +35,16 @@
             display: block;
             margin-bottom: 8px;
             color: #555;
-            font-weight: bold;
+            font-weight: 600;
         }
         .form-group input,
         .form-group select {
             width: 100%;
-            padding: 10px;
+            padding: 12px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 5px;
             box-sizing: border-box;
+            transition: border-color 0.3s;
         }
         .form-group input:focus,
         .form-group select:focus {
@@ -62,13 +53,15 @@
         }
         .btn {
             background-color: #007bff;
-            color: #fff;
+            color: #ffffff;
             padding: 12px 20px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
             width: 100%;
             font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s;
         }
         .btn:hover {
             background-color: #0056b3;
@@ -78,45 +71,40 @@
 <body>
 
     <div class="container">
-        <div class="logo-container">
-            <img src="URL_DEL_LOGO_EMERGENCIAS_1" alt="Logo Emergencias 1" class="logo">
-            <img src="URL_DEL_LOGO_EMERGENCIAS_2" alt="Logo Emergencias 2" class="logo">
-            <img src="URL_DEL_LOGO_PREHOSPITALARIA" alt="Logo Prehospitalaria" class="logo">
-        </div>
         <h2>Planilla de Inscripción</h2>
-        <form action="https://formspree.io/f/xeozbevo" method="POST" id="inscripcionForm">
+        <form action="https://formspree.io/f/xeozbevo" method="POST">
             <div class="form-group">
                 <label for="nombreApellido">Nombre y Apellido</label>
-                <input type="text" id="nombreApellido" name="nombreApellido" required>
+                <input type="text" id="nombreApellido" name="Nombre y Apellido" required>
             </div>
             <div class="form-group">
                 <label for="dni">DNI</label>
-                <input type="text" id="dni" name="dni" required>
+                <input type="text" id="dni" name="DNI" required>
             </div>
             <div class="form-group">
                 <label for="localidad">Localidad</label>
-                <input type="text" id="localidad" name="localidad" required>
+                <input type="text" id="localidad" name="Localidad" required>
             </div>
             <div class="form-group">
                 <label for="provincia">Provincia</label>
-                <input type="text" id="provincia" name="provincia" required>
+                <input type="text" id="provincia" name="Provincia" required>
             </div>
             <div class="form-group">
                 <label for="mail">Mail</label>
-                <input type="email" id="mail" name="mail" required>
+                <input type="email" id="mail" name="Email" required>
             </div>
             <div class="form-group">
                 <label for="telefono">Teléfono</label>
-                <input type="tel" id="telefono" name="telefono" required>
+                <input type="tel" id="telefono" name="Teléfono" required>
             </div>
             <div class="form-group">
                 <label for="curso">Curso Elegido</label>
-                <input type="text" id="curso" name="curso" required>
+                <input type="text" id="curso" name="Curso Elegido" required>
             </div>
             <div class="form-group">
                 <label for="sede">Sede</label>
-                <select id="sede" name="sede" required>
-                    <option value="">Seleccione una sede</option>
+                <select id="sede" name="Sede" required>
+                    <option value="" disabled selected>Seleccione una sede</option>
                     <option value="Dolores">Dolores</option>
                     <option value="La Costa">La Costa</option>
                 </select>
@@ -125,5 +113,5 @@
         </form>
     </div>
 
-    </body>
+</body>
 </html>
